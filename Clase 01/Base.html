@@ -1,0 +1,167 @@
+<!-- 
+    <!DOCTYPE html> indica al navegador que este documento
+    usa HTML5. Evita que el navegador entre en "quirks mode".
+-->
+<!DOCTYPE html>
+
+<!-- 
+    <html lang="es"> es el elemento raíz.
+    El atributo lang="es" indica que el idioma principal es español,
+    lo que ayuda a buscadores, correctores ortográficos y lectores de pantalla.
+-->
+<html lang="es">
+
+<head>
+  <!-- 
+      <meta charset="UTF-8"> define la codificación de caracteres.
+      UTF-8 soporta acentos, ñ, caracteres especiales y emojis.
+  -->
+  <meta charset="UTF-8" />
+
+  <!-- 
+      <meta name="viewport"> hace que la página sea responsive
+      en móviles, ajustando el ancho de visualización.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- 
+      <title> define el título que aparece en la pestaña del navegador
+      y en los resultados de búsqueda.
+  -->
+  <title>Tarjeta</title>
+</head>
+
+<body>
+  <!-- 
+      <header> es un landmark semántico.
+      Aquí se coloca el branding (nombre del sitio) y la navegación principal.
+  -->
+  <header>
+    <!-- h1: encabezado principal de la página -->
+    <h1>Adopta un Amigo</h1>
+
+    <!-- 
+        <nav> indica una sección de navegación.
+        aria-label="Navegación principal" sirve para que lectores de pantalla
+        la identifiquen cuando haya más de un menú en la página.
+    -->
+    <nav aria-label="Navegación principal">
+      <!-- ul/li: lista de enlaces de navegación -->
+      <ul>
+        <!-- 
+            a href="#id" crea un enlace interno que lleva
+            a la sección con el id indicado.
+        -->
+        <li><a href="#adopciones">Adopciones</a></li>
+        <li><a href="#historias">Historias</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+      <main> landmark que contiene el contenido único y principal del documento.
+      Solo debe haber uno por página.
+  -->
+  <main id="contenido">
+
+    <!-- 
+        <section> agrupa contenido temático.
+        aria-labelledby asocia la sección a su encabezado (h2) para accesibilidad.
+    -->
+    <section id="adopciones" aria-labelledby="sec-adopciones">
+      <!-- h2: segundo nivel jerárquico, título de la sección -->
+      <h2 id="sec-adopciones">Animales en adopción</h2>
+
+      <!-- 
+          <article> representa un contenido autocontenido,
+          en este caso, una tarjeta de un animal.
+      -->
+      <article>
+        <header>
+          <!-- h3: título del artículo, tercer nivel dentro del documento -->
+          <h3>Luna</h3>
+        </header>
+
+        <!-- 
+            <figure> agrupa una imagen y su leyenda.
+            <img> debe tener alt descriptivo para accesibilidad.
+            <figcaption> describe el contenido visual.
+        -->
+        <figure>
+          <img src="luna.jpg" alt="Perrita mestiza color café llamada Luna" />
+          <figcaption>Luna, 2 meses, muy juguetona.</figcaption>
+        </figure>
+
+        <!-- Párrafos descriptivos -->
+        <p>Convive bien con niños y otros perros.</p>
+
+        <!-- 
+            <mark> resalta texto que es relevante.
+            En este caso, que está vacunada.
+        -->
+        <p>Vacunada: <mark>Sí</mark></p>
+
+        <!-- 
+            <time datetime=""> muestra una fecha legible
+            y también una versión en formato ISO para máquinas.
+        -->
+        <p>Última revisión: <time datetime="2025-07-15">15 julio 2025</time></p>
+
+        <!-- 
+            <footer> de artículo: contiene información o acciones
+            relacionadas solo con este artículo.
+        -->
+        <footer>
+          <a href="#contacto">Quiero adoptarla</a>
+        </footer>
+      </article>
+    </section>
+
+    <!-- 
+        <aside> contiene información complementaria al contenido principal.
+        aria-label le da un nombre para accesibilidad.
+    -->
+    <aside aria-label="Información adicional">
+      <h2>Requisitos de adopción</h2>
+      <ul>
+        <li>Identificación oficial</li>
+        <li>Compromiso de esterilización</li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- 
+      Segundo <nav>: navegación secundaria.
+      aria-label para diferenciarlo de la navegación principal.
+  -->
+  <nav aria-label="Navegación secundaria">
+    <ul>
+      <li><a href="#adopciones">Adopciones</a></li>
+      <li><a href="#historias">Historias</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- 
+      <footer> landmark para el pie del documento.
+      Puede contener información de contacto y derechos.
+  -->
+  <footer>
+    <!-- 
+        <address> en el footer indica datos de contacto
+        del sitio o su propietario.
+    -->
+    <address>
+      <p>Contacto: <a href="mailto:info@adopta.mx">info@adopta.mx</a></p>
+      <p>CDMX, México</p>
+    </address>
+
+    <!-- 
+        <small> se usa para textos legales o menos relevantes,
+        como copyright o avisos.
+    -->
+    <small>© 2025 Adopta un Amigo</small>
+  </footer>
+</body>
+</html>
