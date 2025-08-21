@@ -1,0 +1,41 @@
+$rosa: #f7cfe3;
+$texto: #4d4d4d;
+
+body {
+  background-color: $rosa;
+  color: $texto;
+}
+
+
+.card {
+    border: 1px solid gray;
+  
+    h2 {
+      color: #d883a0;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+
+//   @mixin sombra-bonita {
+//     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+//     border-radius: 12px;
+//   }
+  
+//   .tarjeta {
+//     @include sombra-bonita;
+//     padding: 1rem;
+//   }
+
+  
+//   .boton {
+//     background: pink;
+  
+//     &:hover {
+//       background: hotpink;
+//     }
+//   }
+  

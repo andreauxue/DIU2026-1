@@ -1,0 +1,108 @@
+:root {
+    --color-primario: #f7cfe3;
+    --color-secundario: #f0e5d8;
+    --color-detalle: #d883a0;  
+    --color-texto: #4d4d4d; 
+    --radio: 12px;
+    --sobra: 0 4px 15px rgba(0, 0, 0, 0.046);
+}
+
+
+body {
+    background-color: var(--color-primario);
+
+}
+
+header {
+    background-color: var(--color-detalle) !important;
+    box-shadow: var(--sobra)!important;
+}
+
+h1 {
+    color: var(--color-texto);
+    font-family: "Edu NSW ACT Cursive", cursive;
+    text-align: center;
+    letter-spacing: 1em;
+    margin: 80px 90px 80px 7px;
+}
+
+p {
+    background-color: var(--color-primario);
+    color: pink;
+    font-weight: 100;
+    font-family: "Mozilla Headline", sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+    padding: 90px;
+    border: 2px solid salmon;
+}
+
+.texto-parpadeo {
+    background-color: var(--color-secundario);
+    color: green;
+    animation: parpadeo 0.2s infinite;
+}
+p::first-letter{
+    font-size: 2em;
+    color: peru;
+}
+
+.contenedor {
+    background-color: rgb(250, 201, 218);
+}
+
+#principal {
+    color: aqua;
+    font-size: clamp(1rem, 2vw, 2rem);
+    width: calc(100% - 20px);
+}
+
+
+a[href^="https"] {
+    text-decoration: underline;
+}
+
+.boton {
+    color: white;
+    border: none;
+    padding: 1rem 1.2rem;
+    border-radius: 2px;
+    font-size: 2rem;
+    cursor: move;
+    transition: background-color 10s ease;
+}
+
+.boton:hover {
+    background-color: plum;
+}
+
+
+.boton:focus {
+    outline: 2px solid blue;
+}
+
+
+.galeria {
+    display: flex;
+    justify-content: right;
+    gap: 8em;
+    margin-top: 100px;
+    flex-wrap: wrap;
+
+}
+
+.contenedor-grid {
+    display: grid;
+    padding: 6em;
+    margin: 3rem auto;
+    border: 3px solid palegreen;
+    box-shadow: 0 4px 15px brown;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+
+@keyframes parpadeo {
+    0% { opacity: 1;}
+    50% { opacity: 0;}
+    100% { opacity: 1;}
+}
