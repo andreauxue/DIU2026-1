@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <h1 id="miTitulo">Esto es un título</h1>
+    <p id="parrafo">Esto es un párrafo</p>
+
+    <ul id="lista"></ul>
+
+    <h2 id="titulo2">Hola</h2>
+    <button id="cambiar">Cambiar título</button>
+
+</form>
+
+<script>
+
+    const titulo = document.getElementById("miTitulo");
+
+    const p = document.getElementById("parrafo");
+
+    const lista = document.getElementById("lista");
+    const nuevoItem = document.createElement("li");
+
+    <!-- titulo.textContent = "Este título fue modificado con JS" -->
+    titulo.innerHTML = "<em>Texto en cursiva</em>"
+
+    p.style.color = "pink";
+    p.style.fontSize = "20px";
+
+    nuevoItem.textContent = "Nuevo elemento";
+    lista.appendChild(nuevoItem);
+
+    
+</script>
+
+<script>
+    <!-- lista.removeChild(nuevoItem) -->
+
+    nuevoItem.remove();
+</script>
+
+
+<script>
+
+    const titulo2 = document.getElementById("titulo2");
+    const boton = document.getElementById("cambiar");
+
+    boton.addEventListener("click", () => {
+        titulo2.textContent = "Título cambiado por evento";
+        titulo2.style.color = "violet";
+    })
+
+
+</script>
+</body>
+</html>
