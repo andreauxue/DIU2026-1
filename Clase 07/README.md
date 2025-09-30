@@ -1,4 +1,5 @@
 # Pasos para correr el proyecto
+## Backend:
 
 Recuerda que para poder correr esto es necesario crear un entorno virtual:
 
@@ -42,4 +43,25 @@ Accede al panel de administración en:
 
 ```
 http://127.0.0.1:8000/admin/
+```
+
+
+## Frontend:
+
+Ve a la carpeta de frontend:
+
+```bash
+cd frontend
+```
+
+instala los paquetes:
+
+```bash
+npm install
+```
+
+Corre el proyecto:
+
+```bash
+npm run dev
 ```
